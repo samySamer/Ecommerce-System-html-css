@@ -12,6 +12,9 @@ body{
     font-family: "Poppins", sans-serif;
 
 }
+h3{
+    font-size:1.8rem;
+}
 .logo img{
     width:12.5rem;
 }
@@ -37,6 +40,12 @@ a{
     color:#555;
     font-size: 1.6rem;
 }
+nav ul li a:hover{
+    text-decoration: underline;
+    text-decoration-color: #555;
+    text-underline-offset: 1rem;
+
+}
 p{
     color:#555;
     font-size: 1.6rem;
@@ -58,7 +67,7 @@ p{
     flex-basis:50%;
     min-width: 30rem;
 }
-.col-2 img{
+.player-img img{
     max-width:100%;
     padding: 5rem 0;
 }
@@ -273,4 +282,96 @@ footer hr{
     width: 2.8rem;
     margin-left: 2rem;
     display: none;
+}
+
+/* ------------------ ALL PRODUCTS PAGE------------------ */
+.row-2{
+    justify-content: space-between;
+    margin:10rem auto 5rem;
+}
+h2{
+    font-size:3rem;
+}
+select{
+    border:1px solid #ff523b;
+    padding: 5px;
+}
+select:focus{
+    outline: none;
+}
+.page-btn{
+    font-size: 1.6rem;
+    margin:0 auto 5rem;
+    display: flex;
+    justify-content: flex-end;
+}
+.page-btn span{
+    display: inline-block;
+    border:1px solid #ff523b;
+    margin-left:1rem;
+    width:4rem;
+    height: 4rem;
+    text-align: center;
+    line-height:4rem ;
+    cursor: pointer;
+}
+.page-btn span:hover{
+ background: #ff523b;
+ color:#fff;
+}
+/* PRODUCT DETAILS */
+.single-product{
+    margin-top:8rem;
+}
+.single-product .col-2{
+    padding: 2rem;
+}
+.productDetails-img{
+    width: 100%;
+    padding: 0;
+}
+.single-product h4{
+    margin:2rem 0;
+    font-size: 2.2rem;
+    color:#555;
+    font-weight:bold ;
+}
+.single-product select{
+    display: block;
+    padding: 1rem;
+    margin-top: 2rem;
+    border-radius: 0.5rem;
+}
+.single-product input{
+    width: 5rem;
+    height: 4rem;
+    padding-left: 1rem;
+    font-size: 2rem;
+    margin-right: 1rem;
+    border:1px solid #ff523b;
+}
+input:focus{
+    outline: none;
+}
+.fa-indent{
+    color: #ff523b;
+    margin-left: 1rem;
+}
+.small-img-col img{
+    width: 100%;
+}
+.small-img-row{
+    display: flex;
+    justify-content: space-between;
+}
+.small-img-col{
+    flex-basis: 24%;
+    cursor: pointer;
+}
+
+.view{
+    cursor: pointer;
+}
+.view:hover{
+    color:#777;
 }

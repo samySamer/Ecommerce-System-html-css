@@ -10,6 +10,7 @@ html{
         width: 100%;
         overflow: hidden;
         transition: max-height 0.5s;
+        display: none;
     }
     nav ul li{
         display: block;
@@ -32,5 +33,19 @@ html{
     }
     .col-2,.col-3,.col-4{
         flex-basis: 100%;
+    }
+    .page-btn{
+        align-items: center;
+        justify-content: center;
+    }
+    .single-product .row{
+        text-align: left;
+    }
+    .col-2{
+        padding:2rem 0 ;
+    }
+    .single-product h1{
+        font-size:2.6rem;
+        line-height: 3.2rem;
     }
 }
