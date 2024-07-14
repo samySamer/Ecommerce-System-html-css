@@ -12,6 +12,9 @@ html{
         transition: max-height 0.5s;
         display: none;
     }
+    .active {
+        display: block;
+    }
     nav ul li{
         display: block;
         margin-right: 5rem;
@@ -43,6 +46,10 @@ html{
     }
     .col-2{
         padding:2rem 0 ;
+    }
+    .col-4 img{
+        max-height: 20rem;
+        width: 20rem;
     }
     .single-product h1{
         font-size:2.6rem;

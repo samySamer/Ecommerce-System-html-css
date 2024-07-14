@@ -13,10 +13,10 @@
     <div class="container">
         <div class="navbar">
             <div class="logo">
-                <img src="./assets/logo.png" alt="">
+              <img class="logo-img" src="./assets/logo.png" alt="" onclick="goToIndex()">
             </div>
             <nav>
-                <ul>
+                <ul class="nav-ul">
                     <li><a href="./index.html">Home</a></li>
                     <li><a href="./products.html">Products</a></li>
                     <li><a href="">About</a></li>
@@ -30,23 +30,23 @@
     </div>
      <!-- ------------ PRODUCT DETAILS------------- -->
       <div class="small-container single-product">
-        <div class="row">
-            <div class="col-2">
+        <div class="row product-Details">
+            <div class="col-2 ">
                 <img class="productDetails-img" src="assets/gallery-1.jpg">
-                <div class="small-img-row">
+                <!-- <div class="small-img-row">
                     <div class="small-img-col">
-                    <img src="assets/gallery-1.jpg">
+                    <img src="assets/gallery-1.jpg" class="1" onclick="onChangeImg(event)">
                     </div>
                     <div class="small-img-col">
-                        <img src="assets/gallery-2.jpg" alt="">
+                        <img src="assets/gallery-2.jpg" class="2" alt="" onclick="onChangeImg(event)">
                     </div>
                     <div class="small-img-col">
-                        <img src="assets/gallery-3.jpg" alt="">
+                        <img src="assets/gallery-3.jpg" class="3" alt="" onclick="onChangeImg(event)">
                     </div>
                     <div class="small-img-col">
-                        <img src="assets/gallery-4.jpg" alt="">
+                        <img src="assets/gallery-4.jpg" class="4" alt="" onclick="onChangeImg(event)">
                     </div>
-                </div>
+                </div> -->
             </div>
             <div class="col-2">
                 <p>Home / T-Shirt</p>
@@ -61,7 +61,7 @@
                     <option value="">Small</option>
                 </select>
                 <input type="number" value="1">
-                <a href="" class="btn">Add to Cart</a>
+                <a href="./cart.html" class="btn">Add to Cart</a>
                 <h3>Product Details <i class="fa fa-indent "></i>
                 </h3>
                 <br>
@@ -170,5 +170,7 @@
             <p class="copyright">Copyright 2024 &copy; Samy Samer</p>
         </div>
     </footer>
+    <script src="script.js"></script>
+    <script src="productDetails.js"></script>
 </body>
 </html>

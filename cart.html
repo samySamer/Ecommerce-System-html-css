@@ -13,10 +13,10 @@
     <div class="container">
         <div class="navbar">
             <div class="logo">
-                <img src="./assets/logo.png" alt="">
+              <img class="logo-img" src="./assets/logo.png" alt="" onclick="goToIndex()">
             </div>
             <nav>
-                <ul>
+                <ul class="nav-ul">
                     <li><a href="./index.html">Home</a></li>
                     <li><a href="./products.html">Products</a></li>
                     <li><a href="">About</a></li>
@@ -36,19 +36,19 @@
                 <th>Quantity</th>
                 <th>Subtotal</th>
             </tr>
-            <tr>
+            <tr class="first-element">
                 <td>
                     <div class="cart-info">
                         <img src="assets/buy-1.jpg" alt="">
                     <div>
                         <p>Red Printed T-Shirt</p>
-                    <small>Price: $50.00</small>
+                    <small >Price: $50.00</small>
                     <br>
-                    <a href="">Remove</a>
+                    <a href="#" class="first-element-remove" onclick="removeElement()">Remove</a>
                     </div>
                     </div></td>
                 <td><input type="number" value="1"></td>
-                <td>$50.00</td>
+                <td class="first-element-price">$50.00</td>
             </tr>
             <tr>
                 <td>
@@ -83,15 +83,15 @@
             <table>
                 <tr>
                     <td>Subtotal</td>
-                    <td>$140.00</td>
+                    <td class="subtotal">$140.00</td>
                 </tr>
                 <tr>
                     <td>Taxes</td>
-                    <td>$10.00</td>
+                    <td class="taxes">$10.00</td>
                 </tr>
                 <tr>
                     <td>Total</td>
-                    <td>$150.00</td>
+                    <td class="total">$150.00</td>
                 </tr>
             </table>
         </div>
@@ -135,5 +135,6 @@
             <p class="copyright">Copyright 2024 &copy; Samy Samer</p>
         </div>
     </footer>
+    <script src="./script.js"></script>
 </body>
 </html>
