@@ -29,3 +29,112 @@ productDetails.innerHTML = `
         </div>
 
 `
+let newProds = document.querySelector(".products");
+console.log(newProds);
+let data = JSON.parse(localStorage.getItem("ApiData"));
+for(let i=0;i<4;i++){
+        newProds.innerHTML+=`
+        <div class="col-4 new-data  item">
+          <img src="${data[i].image}" alt="">
+                <h4>${data[i].title}</h4>
+                <div class="rating">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                </div>
+                <p>$${data[i].price}</p>
+        </div>
+        `
+}
+let rightArrow = document.querySelector(".right-arrow");
+let leftArrow = document.querySelector(".left-arrow");
+let intervalId = setInterval(nextSlide,5000);
+console.log(data)
+
+rightArrow.addEventListener("click", nextSlide);
+leftArrow.addEventListener("click",prevSlide)
+let i =0;
+let firstClickNext=false;
+let firstClickBack=false;
+function prevSlide(){
+        if(!firstClickBack)
+        {
+                firstClickBack=true;
+                firstClickNext=false;
+                i-=5;
+        }
+        let items = document.querySelectorAll(".item");
+        let products = document.querySelector(".products");
+        if(i>=0){
+                items[3].remove();
+                makeProductBefore(i,products);
+                i--;
+        }
+        else{
+                i=data.length-1;
+                makeProductBefore(i,products);
+                i--;
+        }
+
+}
+function nextSlide(){
+
+        if(!firstClickNext){
+                firstClickBack=false;
+                firstClickNext=true;
+                i+=5;
+
+
+        }
+        
+        let items = document.querySelectorAll(".item");
+        let products = document.querySelector(".products");
+        if(i<data.length){
+                items[0].remove();
+                makeProductFront(i,products);
+                i++;
+        }
+        else if(i>=data.length){
+                i=0;
+                makeProductFront(i,products);
+                i++;
+        }
+
+}
+
+    function makeProductFront(index,element){
+        let newElement = document.createElement("div");
+        newElement.className="col-4 item"
+        newElement.innerHTML=` 
+        <img src="${data[index].image}" alt="">
+              <h4>${data[index].title}</h4>
+              <div class="rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+              </div>
+              <p>$${data[index].price}</p>
+      `
+      element.appendChild(newElement);
+    }
+    function makeProductBefore(index,element){
+        let newElement = document.createElement("div");
+        newElement.className="col-4 item"
+        newElement.innerHTML=`  
+        <img src="${data[index].image}" alt="">
+              <h4>${data[index].title}</h4>
+              <div class="rating">
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+              </div>
+              <p>$${data[index].price}</p>
+      `
+      element.insertBefore(newElement,element.firstChild);
+    }

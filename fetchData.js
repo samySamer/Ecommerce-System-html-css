@@ -1,4 +1,5 @@
 let data= fetch("https://fakestoreapi.com/products").then(res=>res.json()).then(json=>{
+    localStorage.setItem("ApiData",JSON.stringify(json));
     console.log(json);
     let featuredDivs = document.querySelectorAll(".featured");
     featuredDivs.forEach((elem,i)=>{

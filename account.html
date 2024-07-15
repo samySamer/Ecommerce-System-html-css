@@ -28,28 +28,39 @@
             <img class="menu-icon" src="assets/menu.png" alt="">
         </div>
     </div>
-     <!-- ------------ PRODUCT DETAILS------------- -->
-      <div class="small-container single-product">
-        <div class="row product-Details">
+    <!-- ACCOUNT PAGE -->
+     <div class="account-page">
+        <div class="container">
+            <div class="row">
+                <div class="col-2">
+                    <img src="assets/image1.png" width="100%" alt="">
+                </div>
+                <div class="col-2">
+                    <div class="form-container">
+                        <div class="form-btn">
+                            <span onclick="login()">login</span>
+                            <span onclick="register()">Register</span>
+                            <hr id="indicator">
+                        </div>
+                        <form id="LoginForm">
+                            <input type="text" placeholder="Username">
+                            <input type="password" placeholder="Password">
+                            <button type="submit" class="btn">Login</button>
+                            <a href="">Forgot password</a>
+                        </form>
+                        <form id="RegForm">
+                            <input type="text" placeholder="Username">
+                            <input type="email" pattern="[a-zA-Z0-9]*@[a-zA-Z0-9]*.com" placeholder="Email">
+                            <input type="text" pattern="(011|012|015)[0-9]{8}" placeholder="Phone Number">
+                            <input type="password" placeholder="Password">
+                            <button type="submit" class="btn">Register</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-
-    <!-- TITLE  -->
-    <div class="small-container">
-        <div class="row row-2">
-            <h2>Related Products</h2>
-            <p class="view">View More</p>
-        </div>
-    </div>
-
-    <!-- ----PRODUCTS----- -->
-    <div class="small-container">
-        <div class="row products">
-            <button class="left-arrow">&#10094;</button>
-            <button class="right-arrow">&#10095;</button>
-        </div>
-    </div>
-    <!-- ------------FOOTER------------- -->
+     </div>
+    <!--------------FOOTER------------- -->
     <footer>
         <div class="container">
             <div class="row">
@@ -88,7 +99,7 @@
             <p class="copyright">Copyright 2024 &copy; Samy Samer</p>
         </div>
     </footer>
-    <script src="script.js"></script>
-    <script src="productDetails.js"></script>
+    <script src="./script.js"></script>
+    <script src="account.js"></script>
 </body>
 </html>
